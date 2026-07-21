@@ -294,6 +294,52 @@ body{
     margin:0;
 }
 
+.contact-form{
+    margin-top:60px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #ddd;
+    padding:12px 0;
+    background:transparent;
+    font-size:14px;
+    color:#171717;
+    outline:none;
+    font-family:"Satoshi","Noto Sans KR",sans-serif;
+}
+
+.contact-form textarea{
+    resize:none;
+    min-height:140px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#111;
+}
+
+.contact-form button{
+    margin-top:20px;
+    align-self:flex-start;
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:13px;
+    letter-spacing:.08em;
+    color:#171717;
+    transition:.25s;
+}
+
+.contact-form button:hover{
+    opacity:.5;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
@@ -332,22 +378,17 @@ body{
 
 /* Mobile */
 @media (max-width:760px){
-    /* ÀüÃ¼ ·¹ÀÌ¾Æ¿ô */
+    /* ì „ì²´ ë ˆì´ì•„ì›ƒ */
     .site-shell{
         display:block;
     }
 
-    /* ÇÁ·ÎÁ§Æ® ¸®½ºÆ® */
+    /* í”„ë¡œì íŠ¸ ë¦¬ìŠ¤íŠ¸ */
     .project-grid{
-
         display:grid;
-
         grid-template-columns:1fr;
-
         gap:35px;
-
         padding:95px 22px 40px;
-
     }
 
     .project-card{
@@ -366,7 +407,7 @@ body{
         font-size:16px;
     }
 
-    /* »ó¼¼ ÆäÀÌÁö */
+    /* ìƒì„¸ í˜ì´ì§€ */
     .project-detail{
         display:flex;
         flex-direction:column;
@@ -436,7 +477,7 @@ body{
     }
 }
 
-/* ÀÛÀº ¸ğ¹ÙÀÏ */
+/* ì‘ì€ ëª¨ë°”ì¼ */
 @media(max-width:420px){
     .brand strong{
         font-size:22px;
@@ -453,20 +494,14 @@ body{
 }
 
 @media (max-width:760px){
-
     .swiper-button-prev::after,
     .swiper-button-next::after{
-
         font-size:18px !important;
-
     }
 
     .swiper-button-prev,
     .swiper-button-next{
-
         width:36px !important;
         height:36px !important;
-
     }
-
 }
