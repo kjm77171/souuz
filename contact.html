@@ -40,21 +40,19 @@
 					<p>
 						Seoul, Korea
 					</p>
-					<!--<p>
-						<a href="mailto:hello@souuz.co.kr">
-						souuz.archi@gmail.com
+					<p>
+						<a href="mailto:souuz.archi@gmail.com">
+							souuz.archi@gmail.com
 						</a>
-					</p>-->
-					<form class="contact-form" action="https://formsubmit.co/kjm7717@naver.com" method="POST">
-						<!-- 스팸 방지 -->
+					</p>
+					<form class="contact-form" action="https://formsubmit.co/8563174ed4a0de8b904a1b30b8e8c7a8" method="POST">
+						<input type="hidden" name="_subject" value="SOUUZ 홈페이지 문의">
 						<input type="hidden" name="_captcha" value="false">
-
-						<!-- 전송 후 돌아올 페이지 -->
-						<input type="hidden" name="_next" value="https://www.souuz.co.kr/contact.html">
+						<input type="hidden" name="_next" value="https://www.souuz.co.kr/contact.html?success=true">
 						<input type="text" name="name" placeholder="Name" required>
 						<input type="email" name="email" placeholder="Email" required>
-						<textarea name="message" placeholder="Message" rows="6" required ></textarea>
-						<button type="submit">보내기</button>
+						<textarea name="message" placeholder="Message" rows="6" required></textarea>
+						<button type="submit">SEND →</button>
 					</form>
 				</div>
 			</section>
@@ -62,5 +60,10 @@
 	</div>
 	<script src="script.js"></script>
 	<script src="sub_script.js"></script>
+	<script>
+		if (new URLSearchParams(location.search).get("success") === "true") {
+			alert("문의가 정상적으로 접수되었습니다.\n감사합니다.");
+		}
+	</script>
 </body>
 </html>
