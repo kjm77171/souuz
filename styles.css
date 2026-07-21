@@ -28,7 +28,6 @@ body { margin: 0; color: var(--ink); background: #fff; font-family: Arial, "Noto
 button, a { color: inherit; }
 button { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-
 .site-shell { min-height: 100svh; display: grid; grid-template-columns: var(--sidebar) minmax(0, 1fr); }
 .sidebar { position: relative; z-index: 10; min-height: 100svh; padding: 54px 31px 28px; display: flex; flex-direction: column; background: #fff; }
 .brand { display: flex; align-items: flex-end; gap: 8px; text-decoration: none; width: fit-content; }
@@ -138,16 +137,6 @@ body{
   .slider-controls { right: 20px; bottom: 27px; }
 }
 
-.project-slider{
-    width:100%;
-    height:calc(100vh - 120px);
-}
-
-.project-slider .swiper{
-    width:100%;
-    height:100%;
-}
-
 .swiper-slide{
     display:flex;
     align-items:center;
@@ -162,7 +151,25 @@ body{
 
 .swiper-button-prev,
 .swiper-button-next{
-    color:#111;
+    width:48px;
+    height:48px;
+    color:rgba(255,255,255,.35) !important;
+    transition:color .25s ease;
+}
+
+.project-slider:hover .swiper-button-prev,
+.project-slider:hover .swiper-button-next{
+    color:rgba(255,255,255,.90) !important;
+}
+
+.project-slider{
+    width:100%;
+    height:calc(100vh - 120px);
+}
+
+.project-slider .swiper{
+    width:100%;
+    height:100%;
 }
 
 .project-detail{
@@ -183,19 +190,16 @@ body{
     line-height:1.8;
 }
 
-
 .project-meta h1{
     font-size:16px;
     font-weight:500;
     margin-bottom:40px;
 }
 
-
 .project-slider{
     width:100%;
     height:calc(100vh - 120px);
 }
-
 
 .project-slider img{
     width:100%;
@@ -220,11 +224,9 @@ body{
     color:#555;
 }
 
-
 .about-history{
     max-width:850px;
 }
-
 
 .about-history h2{
     font-size:11px;
@@ -233,7 +235,6 @@ body{
     color:#888;
     margin-bottom:45px;
 }
-
 
 .history-item{
     display:grid;
@@ -244,17 +245,14 @@ body{
     font-size:13px;
 }
 
-
 .history-item span{
     color:#999;
 }
-
 
 .history-item p{
     margin:0;
     color:#555;
 }
-
 
 .history-item{
     display:grid;
@@ -264,11 +262,9 @@ body{
     font-size:13px;
 }
 
-
 .history-item span{
     color:#888;
 }
-
 
 .history-item p{
     margin:0;
@@ -282,20 +278,17 @@ body{
     max-width:500px;
 }
 
-
 .contact-content h1{
     font-size:12px;
     font-weight:400;
     margin-bottom:80px;
 }
 
-
 .contact-info{
     font-size:14px;
     line-height:2.2;
     color:#555;
 }
-
 
 .contact-info p{
     margin:0;
@@ -310,14 +303,11 @@ body{
    RESPONSIVE FIX
 =========================== */
 
-
 /* Tablet */
 @media (max-width: 1024px) {
-
     :root {
         --sidebar: 220px;
     }
-
 
     .project-grid {
         grid-template-columns: repeat(2, minmax(220px,1fr));
@@ -325,36 +315,27 @@ body{
         padding: 40px;
     }
 
-
     .project-detail {
         grid-template-columns: 220px 1fr;
         gap: 30px;
         padding: 40px;
     }
 
-
     .about-page {
         padding: 60px;
     }
 
-
     .contact-page {
         padding: 60px;
     }
-
 }
-
-
 
 /* Mobile */
 @media (max-width:760px){
-
-
     /* 전체 레이아웃 */
     .site-shell{
         display:block;
     }
-
 
     /* 프로젝트 리스트 */
     .project-grid{
@@ -369,187 +350,123 @@ body{
 
     }
 
-
     .project-card{
         width:100%;
     }
-
 
     .thumb img{
         aspect-ratio:4 / 3;
     }
 
-
     .project-text{
         margin-top:12px;
     }
-
 
     .project-text h3{
         font-size:16px;
     }
 
-
-
     /* 상세 페이지 */
-
     .project-detail{
-
         display:flex;
-
         flex-direction:column;
-
         height:auto;
-
         padding:100px 22px 40px;
-
         gap:30px;
-
     }
-
 
     .project-meta{
-
         order:2;
-
     }
-
 
     .project-meta h1{
-
         margin-bottom:20px;
-
     }
-
 
     .project-slider{
-
         order:1;
-
         height:auto;
-
         aspect-ratio:4 / 3;
-
     }
-
 
     .project-slider .swiper{
-
         height:100%;
-
     }
-
 
     .swiper-slide img{
-
         object-fit:contain;
-
     }
-
-
-
 
     /* ABOUT */
-
     .about-page{
-
         padding:110px 22px 50px;
-
     }
-
 
     .about-intro{
-
         padding-top:0;
-
         margin-bottom:40px;
-
     }
-
 
     .about-intro p{
-
         font-size:14px;
-
         line-height:2;
-
     }
-
-
 
     .history-item{
-
         grid-template-columns:80px 1fr;
-
         font-size:12px;
-
         gap:10px;
-
     }
-
-
-
 
     /* CONTACT */
-
     .contact-page{
-
         padding:110px 22px 50px;
-
     }
-
 
     .contact-content{
-
         max-width:none;
-
     }
-
 
     .contact-content h1{
-
         margin-bottom:50px;
-
     }
-
 
     .contact-info{
-
         font-size:13px;
-
     }
-
-
 }
-
-
-
 
 /* 작은 모바일 */
 @media(max-width:420px){
-
-
     .brand strong{
-
         font-size:22px;
-
     }
-
 
     .project-grid{
-
         padding-left:18px;
-
         padding-right:18px;
-
     }
-
 
     .project-text h3{
-
         font-size:15px;
+    }
+}
+
+@media (max-width:760px){
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+
+        font-size:18px !important;
 
     }
 
+    .swiper-button-prev,
+    .swiper-button-next{
+
+        width:36px !important;
+        height:36px !important;
+
+    }
 
 }
